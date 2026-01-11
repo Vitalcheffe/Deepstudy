@@ -1,33 +1,31 @@
-
 # Deep Study AI
 
-![Python](https://img.shields.io/badge/python-3.10-blue)
-![JavaScript](https://img.shields.io/badge/javascript-ES6-yellow)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Python](https://img.shields.io/badge/python-3.10-blue)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/javascript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
 
 ## What the Project Does
 
-Deep Study AI is an educational application designed to help students transform raw course material into structured learning resources such as summaries, revision notes, quizzes, and mind maps.
+Deep Study AI is an educational application that helps students transform raw course materials into structured learning tools such as summaries, revision notes, quizzes, and mind maps.
 
-The project is built as a full-stack application, with a clear separation between backend logic (content processing and generation) and frontend interfaces (user interaction and visualization).
+The project follows a full-stack architecture with a clear separation between backend logic and frontend interface.
 
 ---
 
 ## Why the Project Is Useful
 
-Studying often means dealing with long, unstructured documents. Deep Study AI focuses on turning that chaos into clarity.
+Deep Study AI aims to improve learning efficiency by automating content structuring.
 
-Main benefits include:
+Main benefits:
+- Automatic generation of concise summaries from raw text
+- Structured revision sheets for faster review
+- Quiz generation to test understanding
+- Mind map creation to visualize relationships between concepts
+- Practical example of a modern full-stack application
 
-- Automatic summarization of course content  
-- Clear and organized revision sheets  
-- Quiz generation to test understanding  
-- Mind maps to visualize relationships between concepts  
-- A complete backend–frontend architecture suitable for real-world projects  
-
-This project is useful for students, educators, and developers interested in educational tools, productivity, and structured learning workflows.
+This project is relevant for students, educators, and developers interested in educational technology.
 
 ---
 
@@ -35,74 +33,78 @@ This project is useful for students, educators, and developers interested in edu
 
 ### Prerequisites
 
-- Python 3.10 or higher  
-- Node.js and npm  
-- A Firebase account (authentication and data storage)
+- Python 3.10 or higher
+- Node.js and npm
+- A Firebase project for authentication and data storage
 
----
+### Installation
 
-## Installation
+Clone the repository:
 
-### Clone the repository
-```bash
-
+```
 git clone https://github.com/Vitalcheffe/Deepstudy.git
-
 cd Deepstudy
+```
 
-### Backend setup
+Install backend dependencies:
 
+```
 pip install -r backend/requirements.txt
+```
 
-### Frontend setup
+Install frontend dependencies:
 
+```
 npm install
+```
 
-### Firebase configuration
-
-Configure Firebase by filling in the `firebase-config.json` file with your own credentials.
+Configure Firebase using the `firebase-config.json` file.
 
 ---
 
-## Launching the Project
+## Running the Project
 
-### Start the backend server
+Start the backend server:
 
+```
 uvicorn backend.main:app --reload
+```
 
-### Start the frontend application
+Start the frontend application:
 
+```
 npm start
+```
 
 ---
 
 ## Usage
 
-1. Start both the backend and frontend  
-2. Submit a course or study text through the interface  
-3. Receive generated summaries, revision notes, quizzes, and mind maps  
-4. Use the generated content to study, revise, or teach more effectively  
+- Launch both backend and frontend
+- Submit course or study material
+- Receive generated summaries, revision notes, quizzes, and mind maps
+- Use the generated content for studying or teaching
 
 ---
 
 ## Technologies Used
 
-- Backend: Python, FastAPI  
-- Frontend: JavaScript, React  
-- Authentication & Database: Firebase  
+- Backend: Python, FastAPI
+- Frontend: JavaScript, React
+- Authentication and Database: Firebase
 
 ---
 
-## Project Maintenance
+## Maintenance and Contributions
 
 Maintained by **Vitalcheffe**.
 
-Contributions are welcome through pull requests or GitHub issues.  
-Feel free to suggest improvements, report bugs, or extend features.
+Contributions are welcome through pull requests and issues.  
+Please keep changes focused and well-documented.
 
 ---
 
 ## License
 
 This project is licensed under the MIT License.  
-See the LICENSE file for more details.
+See the `LICENSE` file for more information.

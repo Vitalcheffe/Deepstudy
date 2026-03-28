@@ -1,110 +1,76 @@
-# Deep Study AI
+<h1 align="center">Deep Study AI</h1>
+<p align="center">Transform raw course materials into structured learning tools.<br/>Summaries, quizzes, mind maps.</p>
 
-[![Python](https://img.shields.io/badge/python-3.10-blue)](https://www.python.org/)
-[![JavaScript](https://img.shields.io/badge/javascript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
----
-
-## What the Project Does
-
-Deep Study AI is an educational application that helps students transform raw course materials into structured learning tools such as summaries, revision notes, quizzes, and mind maps.
-
-The project follows a full-stack architecture with a clear separation between backend logic and frontend interface.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi" />
+  <img src="https://img.shields.io/badge/React-Native-blue?logo=react" />
+  <img src="https://img.shields.io/badge/License-MIT-green" />
+</p>
 
 ---
 
-## Why the Project Is Useful
+## What
 
-Deep Study AI aims to improve learning efficiency by automating content structuring.
+Upload your course materials. Get back structured summaries, revision sheets, quizzes, and mind maps. Powered by AI.
 
-Main benefits:
-- Automatic generation of concise summaries from raw text
-- Structured revision sheets for faster review
-- Quiz generation to test understanding
-- Mind map creation to visualize relationships between concepts
-- Practical example of a modern full-stack application
-
-This project is relevant for students, educators, and developers interested in educational technology.
-
----
-
-## How Users Can Get Started
-
-### Prerequisites
-
-- Python 3.10 or higher
-- Node.js and npm
-- A Firebase project for authentication and data storage
-
-### Installation
-
-Clone the repository:
+## Architecture
 
 ```
-git clone https://github.com/Vitalcheffe/Deepstudy.git
-cd Deepstudy
+Frontend (React Native)  →  Backend (FastAPI)  →  AI Service (DeepSeek/OpenAI)
+                                              →  Firebase (auth + storage)
+                                              →  Stripe (payments)
 ```
 
-Install backend dependencies:
+## Stack
 
-```
+- **Backend:** Python, FastAPI, Firebase Admin, Stripe
+- **Frontend:** React Native, JavaScript
+- **AI:** DeepSeek / OpenAI API
+- **Auth & DB:** Firebase
+- **Payments:** Stripe
+
+## Run it
+
+Backend:
+```bash
 pip install -r backend/requirements.txt
-```
-
-Install frontend dependencies:
-
-```
-npm install
-```
-
-Configure Firebase using the `firebase-config.json` file.
-
----
-
-## Running the Project
-
-Start the backend server:
-
-```
+cp .env.example .env  # add your keys
 uvicorn backend.main:app --reload
 ```
 
-Start the frontend application:
+Frontend:
+```bash
+cd frontend && npm install && npm start
+```
+
+## Structure
 
 ```
-npm start
+backend/
+├── main.py              # FastAPI endpoints
+├── services/
+│   ├── ai_service.py    # AI generation
+│   ├── auth_service.py  # Authentication
+│   └── file_service.py  # File handling
+├── utils/
+│   ├── firebase.py      # Firebase integration
+│   └── stripe.py        # Payment handling
+└── tests/
+
+frontend/
+├── screens/             # App screens
+├── components/          # UI components
+├── services/            # API, auth, storage
+└── firebase-config.js
 ```
 
----
+## Status
 
-## Usage
-
-- Launch both backend and frontend
-- Submit course or study material
-- Receive generated summaries, revision notes, quizzes, and mind maps
-- Use the generated content for studying or teaching
+⚠️ Work in progress. Backend endpoints are scaffolded, frontend screens are built. AI service integration is in development.
 
 ---
 
-## Technologies Used
-
-- Backend: Python, FastAPI
-- Frontend: JavaScript, React
-- Authentication and Database: Firebase
-
----
-
-## Maintenance and Contributions
-
-Maintained by **Vitalcheffe**.
-
-Contributions are welcome through pull requests and issues.  
-Please keep changes focused and well-documented.
-
----
-
-## License
-
-This project is licensed under the MIT License.  
-See the `LICENSE` file for more information.
+<p align="center">
+  <sub>Amine Harch · 16 · Casablanca · <a href="https://vitalcheffe.github.io">vitalcheffe.github.io</a></sub>
+</p>

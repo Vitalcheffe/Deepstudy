@@ -2,3 +2,7 @@ fastapi
 uvicorn
 firebase-admin
 python-multipart
+stripe
+openai
+PyPDF2
+python-dotenv
